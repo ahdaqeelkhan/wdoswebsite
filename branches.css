@@ -1,0 +1,496 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body{
+    background-color: #101010;
+}
+
+/*Navigation bar container*/
+header {
+  width: 100%;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+}
+
+.navbar {
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 1px;
+}
+
+.logo {
+  width: 120px;
+  cursor: pointer;
+  margin-left: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 24px;
+  background: linear-gradient(45deg, #009688, #f9004d, #ffd587, #f2ff41);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #009688;
+}
+
+.navbar ul li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: linear-gradient(45deg, #009688, #f9004d, #ffd587, #f2ff41);
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.8s;
+  border-radius: 5px;
+}
+
+.navbar ul li.active::after {
+  width: 100%;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
+
+/* Add styles for the dropdown */
+.navbar ul .dropdown-parent {
+  position: relative;
+}
+
+.navbar ul .dropdown {
+  display: none;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  top: 100%;
+  left: 0;
+  background-color: #101010;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  width: 100%;
+  transition: 0.8s;
+}
+
+.navbar ul .dropdown li {
+  display: block;
+  margin: 30px 0;
+}
+
+/* Show the dropdown when the parent item is hovered */
+.navbar ul .dropdown-parent:hover .dropdown {
+  display: block;
+  transition: 0.8s;
+}
+
+.hamburger {
+  display: none; /* Hide the hamburger icon by default on larger screens */
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger .line {
+  width: 30px;
+  height: 3px;
+  background-color: #009688;
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 950px) {
+  .navbar ul li:not(:first-child) {
+      display: none; /* Hide navigation items except the home link */
+  }
+
+  .hamburger {
+      display: block; /* Show the hamburger icon on smaller screens */
+  }
+
+  .navbar.active ul{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #101010;
+    text-align: center;
+    
+  }
+
+  .navbar.active ul li {
+      display: block; /* Show navigation items when the hamburger icon is active */
+      margin-bottom: 20px;
+  }
+
+  .navbar ul li.active::after {
+    display: none;
+  }
+
+  .navbar ul li:hover::after {
+    display: none;
+  }
+
+}
+
+.section1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .branchestitle h1 {
+    margin-bottom: 20px;
+    font-family: 'Tulpen One', cursive;
+    font-size: 75px;
+    background: linear-gradient(45deg, #009688, #f9004d, #ffd587, #f2ff41);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .sectiononehorizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  
+  .mapdubai {
+    flex: 1;
+    text-align: center;
+    border-radius: 15px;
+    transition: 0.8s ease;
+    flex-shrink: 0;
+  }
+  
+  .mapdubai iframe {
+    transform: scale(85%);
+    border-radius: 15px;
+  }
+  
+  .mapdubai iframe:hover {
+    transform: scale(90%);
+    transition: 0.8s ease;
+  }
+  
+  .dubaiimg {
+    flex: 1;
+    text-align: center;
+    max-width: 45%;
+    
+  }
+
+  .dubaiimg:hover img {
+    transform: scale(1.1); /* Increase the scale on hover */
+    transition: 0.8s;
+  }
+
+  
+.section1 img {
+    max-width: 90%;
+    height: auto;
+    margin-right: 50px;
+    
+  }
+
+  .dubaiheader h1{
+    color: #ffffff;
+    margin-top: 30px;
+    font-family: 'Tulpen One', cursive;
+    font-size: 70px;
+    font-weight: 100;
+    text-transform: uppercase;
+
+  }
+  
+  .section1 p {
+    color: #ffffff;
+    text-align: center;
+    width: 75%;
+    font-size: 25px;
+    margin-top: 40px;
+    font-weight: lighter;
+    line-height: 1.5;
+  }
+  
+  .section1 span {
+    color: #009688;
+  }
+  
+
+  hr{
+    background: linear-gradient(45deg, #009688, #f9004d, #ffd587, #f2ff41);
+    color: transparent;
+    z-index: 1;
+    border: none;
+    height: 2px; 
+    width: 100%; 
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  /*section */
+
+  .section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  
+  .sectiontwohorizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  
+  .mapnyc {
+    flex: 1;
+    text-align: center;
+    border-radius: 15px;
+    transition: 0.8s ease;
+    flex-shrink: 0;
+  }
+  
+  .mapnyc iframe {
+    transform: scale(85%);
+    border-radius: 15px;
+  }
+  
+  .mapnyc iframe:hover {
+    transform: scale(90%);
+    transition: 0.8s ease;
+  }
+  
+  .nycimg {
+    flex: 1;
+    text-align: center;
+    max-width: 45%;
+    
+  }
+
+  .nycimg:hover img {
+    transform: scale(1.1); /* Increase the scale on hover */
+    transition: 0.8s;
+  }
+
+  
+.section2 img {
+    max-width: 90%;
+    height: auto;
+    margin-right: 50px;
+    
+  }
+
+  .nycheader h1{
+    color: #ffffff;
+    margin-top: 30px;
+    font-family: 'Tulpen One', cursive;
+    font-size: 70px;
+    font-weight: 100;
+    text-transform: uppercase;
+
+  }
+  
+  .section2 p {
+    color: #ffffff;
+    text-align: center;
+    width: 75%;
+    font-size: 25px;
+    margin-top: 40px;
+    font-weight: lighter;
+    line-height: 1.5;
+  }
+  
+  .section2 span {
+    color: #f9004d;
+  }
+
+/*Section 3*/
+
+.section3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  text-align: center;
+}
+
+
+.sectionthreehorizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.maplondon {
+  flex: 1;
+  text-align: center;
+  border-radius: 15px;
+  transition: 0.8s ease;
+  flex-shrink: 0;
+}
+
+.maplondon iframe {
+  transform: scale(85%);
+  border-radius: 15px;
+}
+
+.maplondon iframe:hover {
+  transform: scale(90%);
+  transition: 0.8s ease;
+}
+
+.londonimg {
+  flex: 1;
+  text-align: center;
+  max-width: 45%;
+  
+}
+
+.londonimg:hover img {
+  transform: scale(1.1); /* Increase the scale on hover */
+  transition: 0.8s;
+}
+
+
+.section3 img {
+  max-width: 90%;
+  height: auto;
+  margin-right: 50px;
+  
+}
+
+.londonheader h1{
+  color: #ffffff;
+  margin-top: 30px;
+  font-family: 'Tulpen One', cursive;
+  font-size: 70px;
+  font-weight: 100;
+  text-transform: uppercase;
+
+}
+
+.section3 p {
+  color: #ffffff;
+  text-align: center;
+  width: 75%;
+  font-size: 25px;
+  margin-top: 40px;
+  font-weight: lighter;
+  line-height: 1.5;
+}
+
+.section3 span {
+  color: #f9004d;
+}
+
+
+/* Table container styles */
+
+/* Table styles */
+.table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  margin-top: 150px;
+}
+
+/* Table styles */
+table {
+  width: 75%;
+  border: 1px solid #000;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #ffffff;
+}
+
+/* Header cell styles */
+table th {
+  border: 1px solid #000;
+  padding: 10px 30px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Data cell styles */
+table td {
+  border: 1px solid #000;
+  padding: 20px 30px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Style for the image cell */
+.image-cell {
+  position: relative;
+  padding: 0; /* Remove padding to prevent cell expansion */
+}
+
+/* Style for the scaled image */
+.image-cell img {
+  max-width: 50%; /* Ensure the image fits within the cell width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any extra space below the image */
+  margin: 0 auto; /* Center the image horizontally */
+  
+}
+
+/*Responsiveness for smaller screen sizes*/
+
+@media (max-width: 768px){
+  .sectiononehorizontal{
+    flex-direction: column;
+  }
+
+  .mapdubai,
+  .dubaiimg{
+    width: 100%;
+    max-width: none;
+  }
+
+  .sectiontwohorizontal{
+    flex-direction: column;
+  }
+
+  .mapnyc,
+  .nycimg{
+    width: 100%;
+    max-width: none;
+  }
+}
+
+

@@ -4,15 +4,15 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 body {
-    font-family: 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #101010;
 }
 
 .banner{
     margin: 0;
     padding: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)) ,url('abstract-blur-luxury-hotel-lobby-and-lounge-for-background-free-photo.jpg'); 
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat; 
@@ -50,7 +50,7 @@ nav ul li{
 }
 
 nav ul li a{
-    color: rgb(28, 26, 26);
+    color: white;
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
@@ -96,7 +96,7 @@ main {
 .bar {
     width: 30px;
     height: 3px;
-    background-color: #170802;
+    background-color: #FF5F1F;
     margin: 6px 0;
 }
 
@@ -141,25 +141,28 @@ th {
 
 /* Styling for individual booking forms */
 .booking-form1 {
-    background-image: linear-gradient(rgb(213, 202, 202), grey, white); 
-      border: 3px solid;
+    background-color: #cacaca;
+    border: 3px solid;
+    border-image:linear-gradient( violet, indigo, blue, green, yellow, orange, red, violet);
     border-image-slice: 1;
-
-    margin-top: 100px;
+    animation: borderRainbow 10s linear infinite;
+    margin-top: 10px;
     margin-bottom: 1500px;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 70px;
     width: 50%;
     margin: auto;
 }
 
 .booking-form2 {
-    background-image: linear-gradient(rgb(213, 202, 202), grey, white); 
+    background-color: #cacaca;
     border: 3px solid;
+    border-image:linear-gradient( violet, indigo, blue, green, yellow, orange, red, violet);
     border-image-slice: 1;
+    animation: borderRainbow 10s linear infinite;
     margin-top: 1000px;
     margin-bottom: 1500px;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 70px;
     width: 50%;
     margin: auto;
@@ -176,27 +179,27 @@ th {
     margin: auto;
     font-size: larger;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: #0d0a09;
+    color: #FF5F1F;
 }
 
 
 .booking-form1 h2 {
-    color: #020406;
+    color: #007bff;
     margin-bottom: 20px;
     text-align: center;
 }
 .booking-form2 h2 {
-    color: #1b1e21;
+    color: #007bff;
     margin-bottom: 20px;
     text-align: center;
 }
 .booking-form3 h2 {
-    color: #202223;
+    color: #007bff;
     margin-bottom: 20px;
     text-align: center;
 }
 .booking-form4 h2 {
-    color: #010101;
+    color: #007bff;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -295,7 +298,7 @@ select {
 }
 
 #CheckLoyalty {
-    background-color: #0a28a3; 
+    background-color: #27f12e; 
     color: white;
     padding: 10px;
     text-align: center;
@@ -308,11 +311,7 @@ select {
 }
 
 #CheckLoyalty:hover {
-    background-color: #150337;
-}
-.button-container{
-    margin: 10px;
-    border-radius: 10px;
+    background-color: #028f02;
 }
 
 #DisplayLoyaltyPoints {
@@ -329,14 +328,24 @@ select {
 }
 
 
-
+@keyframes borderRainbow {
+    0% {
+        border-image-source: linear-gradient(violet, indigo, blue, green, yellow, orange, red, violet);
+    }
+    50% {
+        border-image-source: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+    }
+    100% {
+        border-image-source: linear-gradient(violet, indigo, blue, green, yellow, orange, red, violet);
+    }
+}
 
 /* Responsive Navigation Styles */
 @media screen and (max-width: 768px) {
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #0c0a0a;
+        background-color: #333;
         position: absolute;
         top: 80px;
         right: 0;
@@ -393,7 +402,7 @@ select {
   header {
     width: 100%;
     height: auto;
-    background: white;
+    background: #ffffff;
     background-position: center;
     background-size: cover;
   }
@@ -406,7 +415,6 @@ select {
     align-items: center;
     justify-content: space-between;
     height: 1px;
-    background-color: white;
   }
   
   .logo {
@@ -416,6 +424,7 @@ select {
     text-transform: uppercase;
     text-decoration: none;
     font-size: 24px;
+    background: linear-gradient(45deg, #009688, #f9004d, #ffd587, #f2ff41);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -432,13 +441,14 @@ select {
   .navbar ul li a {
     text-decoration: none;
     text-transform: uppercase;
-    color: #404a49;
+    color: #009688;
   }
   
   .navbar ul li::after {
     content: "";
     height: 3px;
     width: 0;
+    background: linear-gradient(45deg, #009688, #f9004d, #ffd587, #f2ff41);
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -495,7 +505,7 @@ select {
   .hamburger .line {
     width: 30px;
     height: 3px;
-    background-color: #2c3030;
+    background-color: #009688;
     margin-bottom: 5px;
   }
   
@@ -588,7 +598,7 @@ select {
   }
   
   #submit-button {
-    background-color: #2c2829;
+    background-color: #f9004d;
     border: none;
     padding: 10px 10px;
     border-radius: 25px;
@@ -740,7 +750,7 @@ select {
   
   /* Header styles */
   nav {
-    background-color: #111010;
+    background-color: #333;
     color: white;
     padding: 10px 0;
   }
